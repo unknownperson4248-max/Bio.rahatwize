@@ -48,3 +48,13 @@
 #portraitPlaceholder[hidden]{display:none!important}
 .profile #bio,.social-link{backdrop-filter:blur(2px)}
 @media(max-width:650px){.background{background-position:center top!important}.shade{background:linear-gradient(180deg,rgba(5,0,18,.02),rgba(4,0,15,.20) 36%,rgba(2,0,12,.58) 100%)!important}}
+
+/* 2026 reference-match refinements: anime backdrop, two-column mobile gaming cards */
+.brand-title{font-family:'Rajdhani',Arial,sans-serif!important;letter-spacing:2px!important;font-size:clamp(12px,1.7vw,17px)!important}
+.columns{position:relative;z-index:2}.profile,.social{min-width:0}
+.social-link{position:relative;overflow:hidden;isolation:isolate}
+.social-link::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,transparent,rgba(255,255,255,.045),transparent);transform:translateX(-100%);transition:transform .55s ease}.social-link:hover::before{transform:translateX(100%)}
+.social-link.freefire-link{--accent:#ff713a!important;border-color:#ff8c41;box-shadow:0 0 18px #ff752e88,inset 0 0 18px #ea3d4a55;background:linear-gradient(100deg,rgba(20,5,25,.83),rgba(82,15,22,.82)),url('/assets/anime-background.webp') right 40%/cover no-repeat}
+.freefire-link .app-icon{background:linear-gradient(145deg,#ffbe35,#f04616)!important;box-shadow:0 0 19px #ff712caa!important}.freefire-link strong{text-shadow:0 0 11px #fd8a35!important}
+@media(max-width:650px){.wrap{padding:16px 10px 8px}.columns{grid-template-columns:minmax(0,45%) minmax(0,55%);gap:6px}.portrait{width:86%;margin:27px auto 24px}.profile #bio{font-size:11px;line-height:1.5}.social{padding-top:12px;gap:9px}.social-link{min-height:58px;border-radius:25px;padding:6px!important;gap:5px!important}.social-link .app-icon{width:30px;height:30px}.social-link .info strong{font-size:clamp(10px,2.65vw,15px)!important;overflow-wrap:anywhere!important;line-height:1.1!important}.social-link small{font-size:9px!important}.social-link .arrow{font-size:14px!important}.logo-stage{margin-top:15px}}
+@media(max-width:370px){.columns{grid-template-columns:minmax(0,44%) minmax(0,56%)}.social-link .app-icon{width:27px;height:27px}.social-link{padding:4px!important}.tagline{font-size:10px}}
