@@ -30,3 +30,12 @@
 
 /* Official WizeFF logo retains artwork proportions */
 .social-link .app-icon img.topup-official-logo{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 0 10px #00ebff80}
+
+/* Graphic overlays from separately maintained transparent SVG artwork */
+.portrait .graphic-frame{position:absolute!important;inset:-16%!important;width:132%!important;height:132%!important;max-width:none!important;object-fit:contain!important;border-radius:0!important;z-index:4;pointer-events:none;animation:graphic-frame-breathe 5.5s ease-in-out infinite alternate}
+.portrait:before{opacity:.35}.portrait .portrait-crown{opacity:0}.portrait .arc-flare,.portrait .orbit{opacity:.16}
+@keyframes graphic-frame-breathe{from{transform:scale(.99) rotate(-1deg);filter:drop-shadow(0 0 7px #ff33d577)}to{transform:scale(1.025) rotate(1deg);filter:drop-shadow(0 0 15px #00dcff99)}}
+.logo-stage{position:relative;width:100%;max-width:430px;margin:18px auto 8px}.logo-stage #name{position:absolute!important;opacity:0!important;pointer-events:none;inset:0;margin:0}.logo-stage .graphic-name{width:100%;height:auto;display:block;filter:drop-shadow(0 0 8px #df30fe55);animation:logo-drift 5.2s ease-in-out infinite alternate}
+@keyframes logo-drift{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-5px) rotate(.7deg)}}
+@media(max-width:650px){.portrait .graphic-frame{inset:-18%!important;width:136%!important;height:136%!important}.logo-stage{margin:16px auto 0}}
+@media(prefers-reduced-motion:reduce){.logo-stage .graphic-name,.portrait .graphic-frame{animation:none}}
