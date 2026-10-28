@@ -39,3 +39,12 @@
 @keyframes logo-drift{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-5px) rotate(.7deg)}}
 @media(max-width:650px){.portrait .graphic-frame{inset:-18%!important;width:136%!important;height:136%!important}.logo-stage{margin:16px auto 0}}
 @media(prefers-reduced-motion:reduce){.logo-stage .graphic-name,.portrait .graphic-frame{animation:none}}
+
+/* Portrait + neon anime background from the user's supplied materials */
+.background{background:#070518 url('/assets/anime-background.webp') center top/cover no-repeat!important;filter:saturate(1.18)}
+.shade{background:linear-gradient(180deg,rgba(4,1,15,.06) 0%,rgba(4,1,18,.1) 25%,rgba(3,1,12,.38) 49%,rgba(3,1,12,.55) 100%),linear-gradient(90deg,rgba(6,0,23,.08),rgba(5,2,20,.2))!important}
+.portrait>img#portraitImage{z-index:1!important;inset:11%!important;width:78%!important;height:78%!important;object-fit:cover!important;object-position:center 35%;border-radius:50%!important;box-shadow:0 0 9px #0ff9,0 0 20px #e416d655}
+.portrait>.graphic-frame{z-index:5!important}
+#portraitPlaceholder[hidden]{display:none!important}
+.profile #bio,.social-link{backdrop-filter:blur(2px)}
+@media(max-width:650px){.background{background-position:center top!important}.shade{background:linear-gradient(180deg,rgba(5,0,18,.02),rgba(4,0,15,.20) 36%,rgba(2,0,12,.58) 100%)!important}}
