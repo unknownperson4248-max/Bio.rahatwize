@@ -1,0 +1,17 @@
+name = "bio-rahatwize"
+main = "worker.js"
+compatibility_date = "2026-10-29"
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+run_worker_first = ["/api/*", "/media/*"]
+
+[[kv_namespaces]]
+binding = "SETTINGS_KV"
+id = "d8cc12bd9ae04ab5a376d0341f41e9a7"
+
+# Enable R2 in the Cloudflare dashboard before uncommenting this binding.
+# [[r2_buckets]]
+# binding = "MEDIA_BUCKET"
+# bucket_name = "rahat-wize-media"
