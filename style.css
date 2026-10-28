@@ -58,3 +58,28 @@
 .freefire-link .app-icon{background:linear-gradient(145deg,#ffbe35,#f04616)!important;box-shadow:0 0 19px #ff712caa!important}.freefire-link strong{text-shadow:0 0 11px #fd8a35!important}
 @media(max-width:650px){.wrap{padding:16px 10px 8px}.columns{grid-template-columns:minmax(0,45%) minmax(0,55%);gap:6px}.portrait{width:86%;margin:27px auto 24px}.profile #bio{font-size:11px;line-height:1.5}.social{padding-top:12px;gap:9px}.social-link{min-height:58px;border-radius:25px;padding:6px!important;gap:5px!important}.social-link .app-icon{width:30px;height:30px}.social-link .info strong{font-size:clamp(10px,2.65vw,15px)!important;overflow-wrap:anywhere!important;line-height:1.1!important}.social-link small{font-size:9px!important}.social-link .arrow{font-size:14px!important}.logo-stage{margin-top:15px}}
 @media(max-width:370px){.columns{grid-template-columns:minmax(0,44%) minmax(0,56%)}.social-link .app-icon{width:27px;height:27px}.social-link{padding:4px!important}.tagline{font-size:10px}}
+
+/* Animated cyberpunk enhancement — original layout retained */
+.background{animation:rw-scene 23s ease-in-out infinite alternate;will-change:transform;transform-origin:center 42%}
+@keyframes rw-scene{from{transform:scale(1.035) translate3d(-.5%,0,0);filter:saturate(1.1) hue-rotate(-4deg)}to{transform:scale(1.12) translate3d(1%,-1%,0);filter:saturate(1.28) hue-rotate(7deg)}}
+.neon-atmosphere{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;isolation:isolate}
+.light-beam{position:absolute;width:66vw;height:66vw;border-radius:50%;filter:blur(68px);mix-blend-mode:screen;opacity:.14;animation:rw-beam 11s ease-in-out infinite alternate}
+.beam-a{top:-28%;left:-25%;background:#f219e7}.beam-b{bottom:-25%;right:-25%;background:#00caff;animation-delay:-6s}
+@keyframes rw-beam{from{opacity:.08;transform:translate3d(-5%,0,0) scale(.8)}to{opacity:.26;transform:translate3d(7%,-8%,0) scale(1.25)}}
+.butterfly{position:absolute;display:block;opacity:.6;font-size:clamp(16px,3vw,28px);filter:drop-shadow(0 0 7px #ee39fb) drop-shadow(0 0 15px #27a9ff);animation:rw-butterfly 13s ease-in-out infinite alternate}
+.b1{left:5%;top:18%}.b2{left:33%;top:7%;animation-delay:-5s;animation-duration:17s}.b3{right:8%;top:37%;animation-delay:-8s;animation-duration:15s}.b4{right:17%;bottom:9%;animation-delay:-3s;animation-duration:19s}
+@keyframes rw-butterfly{0%{transform:translate3d(-10px,12px,0) rotate(-24deg) scale(.7);opacity:.16}45%{transform:translate3d(20px,-34px,0) rotate(15deg) scale(1.1);opacity:.85}100%{transform:translate3d(-15px,-85px,0) rotate(-15deg) scale(.8);opacity:.25}}
+.particles{position:absolute;inset:0;opacity:.44;background-image:radial-gradient(circle,#fff 1px,transparent 2px),radial-gradient(circle,#fd58ff 1px,transparent 2px),radial-gradient(circle,#57dfff 1px,transparent 2px);background-size:127px 199px,173px 137px,227px 181px;animation:rw-stars 28s linear infinite}
+@keyframes rw-stars{to{background-position:127px -199px,173px -137px,227px -181px}}
+.wrap{isolation:isolate}.portrait{animation:rw-aura 4.4s ease-in-out infinite alternate}
+@keyframes rw-aura{to{box-shadow:0 0 25px #f52cf7e8,0 0 53px #09cfff8c,0 0 85px #f31aff66}}
+.portrait .graphic-frame{animation:graphic-frame-breathe 5.5s ease-in-out infinite alternate,rw-crown-glow 3.4s ease-in-out infinite alternate}
+@keyframes rw-crown-glow{to{filter:drop-shadow(0 0 14px #fa18ffdc) drop-shadow(0 0 16px #00e0ffac)}}
+.logo-stage .graphic-name{animation:logo-drift 5.2s ease-in-out infinite alternate,rw-logo-glow 3.3s ease-in-out infinite alternate}
+@keyframes rw-logo-glow{to{filter:drop-shadow(0 0 12px #f03bffee) drop-shadow(0 0 21px #00cfffaa)}}
+.social-link{transition:transform .27s cubic-bezier(.2,.8,.2,1),box-shadow .27s ease,filter .27s ease}
+.social-link:hover,.social-link:focus-visible{transform:translateY(-3px) scale(1.025);box-shadow:0 0 20px var(--accent),0 0 38px color-mix(in srgb,var(--accent),transparent 55%)}
+.social-link:active{transform:scale(.97);filter:brightness(1.2)}.social-link:focus-visible{outline:2px solid white;outline-offset:3px}
+.social-link .app-icon svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.social-link .app-icon svg path[fill],.social-link .app-icon svg circle[fill]{stroke:none}
+@media(max-width:650px){.light-beam{width:95vw;height:95vw;filter:blur(45px)}.butterfly{font-size:17px}.social-link:hover{transform:none}.social-link:active{transform:scale(.96)}}
+@media(prefers-reduced-motion:reduce){.background,.neon-atmosphere *,.portrait,.portrait .graphic-frame,.logo-stage .graphic-name{animation:none!important}}
