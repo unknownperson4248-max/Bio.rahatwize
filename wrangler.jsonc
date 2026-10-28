@@ -1,0 +1,8 @@
+{
+  "name": "bio-rahatwize",
+  "compatibility_date": "2026-10-28",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "single-page-application"
+  }
+}
