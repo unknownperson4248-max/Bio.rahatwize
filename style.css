@@ -105,10 +105,20 @@ header{height:clamp(130px,22svh,230px)}footer{margin-top:26px;padding-bottom:6px
 @media(prefers-reduced-motion:reduce){.social-link .app-icon,.app-icon img{animation:none!important}}
 
 /* Natural playback: no frozen portal frame, full-screen glow filters or zoom. */
-.video-intro,.video-intro.blend-to-profile.finished{animation:none!important;transform:none!important;filter:none!important;will-change:opacity;transition:opacity .4s ease;isolation:auto}
+.video-intro{animation:none!important;filter:none!important;will-change:opacity;transition:opacity .4s ease;isolation:auto}
 .video-intro video{filter:none!important}
 .video-intro.finished,.video-intro.blend-to-profile.finished{opacity:0;pointer-events:none}
 .video-finished .profile{animation:normal-profile-in .4s ease-out both}
 .video-loading .neon-atmosphere{visibility:hidden}
 @keyframes normal-profile-in{from{opacity:0}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){.video-finished .profile{animation:none!important}}
+
+/* Lightweight portal hand-off: video keeps playing at its natural speed. */
+.video-intro.blend-to-profile.finished{animation:portal-handoff .6s cubic-bezier(.22,.7,.22,1) both!important;transition:none;opacity:1;will-change:transform,opacity}
+@keyframes portal-handoff{0%{transform:translate(0,0) scale(1);opacity:1}75%{transform:translate(var(--intro-x),var(--intro-y)) scale(var(--intro-scale));opacity:.95}100%{transform:translate(var(--intro-x),var(--intro-y)) scale(var(--intro-scale));opacity:0}}
+.video-intro.blend-to-profile.finished{transform:none;}
+.video-finished .profile{animation:none;opacity:1;filter:none}
+.video-finished .profile>.portrait{animation:normal-profile-in .25s ease-out .35s both}
+.video-finished .profile>:not(.portrait),.video-finished footer{animation:normal-profile-in .3s ease-out .6s both!important}
+body.intro-disabled.video-finished .profile>*,body.intro-disabled.video-finished footer{animation:none!important}
+@media(prefers-reduced-motion:reduce){.video-intro.blend-to-profile.finished{animation:none!important;opacity:0}.video-finished .profile>*,.video-finished footer{animation:none!important}}
