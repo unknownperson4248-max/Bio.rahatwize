@@ -125,3 +125,8 @@ body.intro-disabled.video-finished .profile>*,body.intro-disabled.video-finished
 @media(prefers-reduced-motion:reduce){.video-intro.blend-to-profile.finished{animation:none!important;opacity:0}.video-finished .profile>*,.video-finished footer{animation:none!important}}
 
 .sound-toggle{position:fixed;z-index:1100;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));border:1px solid #ac63d677;background:#10071ee8;color:#eedcff;border-radius:999px;padding:8px 12px;font:11px system-ui;cursor:pointer}.sound-toggle:focus-visible{outline:2px solid #75eaff;outline-offset:3px}
+
+/* Keep the intro character opaque against the detailed background. */
+body.video-loading .background{filter:brightness(.3) saturate(.85)}
+.video-intro{mix-blend-mode:normal}
+.video-intro video{filter:brightness(1.1) contrast(1.05)!important}
