@@ -91,7 +91,15 @@ header{height:clamp(130px,22svh,230px)}footer{margin-top:26px;padding-bottom:6px
 }
 /* Keep the last portal visible while it travels to the real portrait bounds. */
 .video-intro{isolation:isolate;will-change:transform,opacity}.video-intro video{filter:brightness(1.2) saturate(.85) drop-shadow(0 0 12px #cfadff88) drop-shadow(0 0 22px #74eaff55)}
-.video-intro.blend-to-profile.finished{opacity:1;filter:none;transition:none;animation:portal-merge 1.15s cubic-bezier(.22,.7,.22,1) both}
+.video-intro.blend-to-profile.finished{opacity:1;filter:none;transition:none;animation:portal-merge .65s cubic-bezier(.22,.7,.22,1) both}
 @keyframes portal-merge{0%{transform:translate(0,0) scale(1);opacity:1}72%{transform:translate(var(--intro-x),var(--intro-y)) scale(var(--intro-scale));opacity:1}100%{transform:translate(var(--intro-x),var(--intro-y)) scale(var(--intro-scale));opacity:0}}
-.video-finished .profile{animation:profile-through-portal .5s ease-out .65s both}.video-finished .social-link{animation-delay:1.05s}.video-finished .social-link:nth-child(2){animation-delay:1.17s}.video-finished .social-link:nth-child(3){animation-delay:1.29s}.video-finished .social-link:nth-child(4){animation-delay:1.41s}.video-finished .social-link:nth-child(5){animation-delay:1.53s}.video-finished .social-link:nth-child(6){animation-delay:1.65s}.video-finished .social-link:nth-child(7){animation-delay:1.77s}
+.video-finished .profile{animation:profile-through-portal .3s ease-out .35s both}.video-finished .social-link{animation-delay:1.05s}.video-finished .social-link:nth-child(2){animation-delay:1.17s}.video-finished .social-link:nth-child(3){animation-delay:1.29s}.video-finished .social-link:nth-child(4){animation-delay:1.41s}.video-finished .social-link:nth-child(5){animation-delay:1.53s}.video-finished .social-link:nth-child(6){animation-delay:1.65s}.video-finished .social-link:nth-child(7){animation-delay:1.77s}
 @media(prefers-reduced-motion:reduce){.video-intro{display:none!important}.video-finished .profile,.video-finished .social-link{animation:none!important}}
+
+
+/* Custom links keep the same neon card and accessible motion options. */
+.social-link .app-icon{background:var(--accent);filter:none}.social-link[data-brand="WIZE FF TOPUP"] .app-icon{background:#66147e}.social-link[data-brand="FREE FIRE ID BUY–SELL"] .app-icon{background:transparent;color:#ffcc26}.social-link[data-brand="TikTok"] .app-icon{background:#030307;filter:drop-shadow(2px 1px 0 #ff004f) drop-shadow(-2px -1px 0 #00f2ea)}.social-link[data-brand="Instagram"] .app-icon{background:radial-gradient(circle at 25% 100%,#ffd75a,#ff493c 40%,#d324ad 65%,#7046e9)}
+.app-icon img{width:84%;height:84%;object-fit:contain;border-radius:50%;animation:glyph-pulse 4s ease-in-out infinite}
+.social-link .app-icon[data-motion=float]{animation:icon-lift 4s ease-in-out infinite}.social-link .app-icon[data-motion=pulse]{animation:custom-pulse 2.4s ease-in-out infinite}.social-link .app-icon[data-motion=spin]{animation:portrait-orbit 8s linear infinite}.social-link .app-icon[data-motion=none],.social-link .app-icon[data-motion=none] *,.social-link .app-icon[data-motion=none]:after{animation:none!important}
+@keyframes custom-pulse{50%{transform:scale(1.09);box-shadow:0 0 18px var(--accent)}}
+@media(prefers-reduced-motion:reduce){.social-link .app-icon,.app-icon img{animation:none!important}}
