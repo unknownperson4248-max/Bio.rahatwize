@@ -122,3 +122,5 @@ header{height:clamp(130px,22svh,230px)}footer{margin-top:26px;padding-bottom:6px
 .video-finished .profile>:not(.portrait),.video-finished footer{animation:normal-profile-in .3s ease-out .6s both!important}
 body.intro-disabled.video-finished .profile>*,body.intro-disabled.video-finished footer{animation:none!important}
 @media(prefers-reduced-motion:reduce){.video-intro.blend-to-profile.finished{animation:none!important;opacity:0}.video-finished .profile>*,.video-finished footer{animation:none!important}}
+
+.sound-toggle{position:fixed;z-index:1100;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));border:1px solid #ac63d677;background:#10071ee8;color:#eedcff;border-radius:999px;padding:8px 12px;font:11px system-ui;cursor:pointer}.sound-toggle:focus-visible{outline:2px solid #75eaff;outline-offset:3px}
