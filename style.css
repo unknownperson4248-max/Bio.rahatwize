@@ -103,3 +103,12 @@ header{height:clamp(130px,22svh,230px)}footer{margin-top:26px;padding-bottom:6px
 .social-link .app-icon[data-motion=float]{animation:icon-lift 4s ease-in-out infinite}.social-link .app-icon[data-motion=pulse]{animation:custom-pulse 2.4s ease-in-out infinite}.social-link .app-icon[data-motion=spin]{animation:portrait-orbit 8s linear infinite}.social-link .app-icon[data-motion=none],.social-link .app-icon[data-motion=none] *,.social-link .app-icon[data-motion=none]:after{animation:none!important}
 @keyframes custom-pulse{50%{transform:scale(1.09);box-shadow:0 0 18px var(--accent)}}
 @media(prefers-reduced-motion:reduce){.social-link .app-icon,.app-icon img{animation:none!important}}
+
+/* Natural playback: no frozen portal frame, full-screen glow filters or zoom. */
+.video-intro,.video-intro.blend-to-profile.finished{animation:none!important;transform:none!important;filter:none!important;will-change:opacity;transition:opacity .4s ease;isolation:auto}
+.video-intro video{filter:none!important}
+.video-intro.finished,.video-intro.blend-to-profile.finished{opacity:0;pointer-events:none}
+.video-finished .profile{animation:normal-profile-in .4s ease-out both}
+.video-loading .neon-atmosphere{visibility:hidden}
+@keyframes normal-profile-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.video-finished .profile{animation:none!important}}
