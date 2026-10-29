@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /api/config
+Disallow: /admin
+Disallow: /api/
+Sitemap: https://rahatwize.com/sitemap.xml
