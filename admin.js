@@ -32,3 +32,7 @@ $('accountForm').onsubmit=async event=>{event.preventDefault();if(dirty)return m
 document.addEventListener('input',event=>{if(!$('editor').contains(event.target)||$('accountForm').contains(event.target))return;setDirty();if(event.target.id.startsWith('seo-'))updatePreview()});
 window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue=''}});
 (async()=>{if(await init())return;try{const status=await request('/api/admin/status');if(status.setupRequired){$('login').hidden=true;$('setup').hidden=false;if(!setupToken){$('setupForm').hidden=true;$('setupNote').textContent='Open your private setup link to create the owner login.'}}}catch(e){message(e.message,true)}})();
+
+// Recovery requests are deliberately not accepted until a verified mail sender and
+// server-side single-use token verification are configured.
+$('forgotPassword').onclick=()=>{$('recoveryHint').hidden=false;message('Email password reset is not active yet. Sender verification is required.',true)};
