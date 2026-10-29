@@ -58,3 +58,5 @@
  .signature{font-size:clamp(15px,4vw,23px)}
 }
 @media(prefers-reduced-motion:reduce){.social-link,.social-link .app-icon{transition:none!important}}
+
+.custom-background .background:before{display:none}.custom-name .graphic-name{display:none!important}.custom-name #name{position:relative;width:auto;height:auto;clip-path:none;overflow:visible;white-space:pre-line;font-style:italic;font-size:clamp(27px,7vw,70px);line-height:1.05;margin:10px 0;color:#fff;text-shadow:0 0 14px #e415e5}.intro-disabled .mage-intro{display:none!important}.intro-disabled .portrait #portraitImage,.intro-disabled .portrait .graphic-frame,.intro-disabled .logo-stage,.intro-disabled .roles,.intro-disabled #bio,.intro-disabled .signature,.intro-disabled .together,.intro-disabled .social-link,.intro-disabled footer{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
