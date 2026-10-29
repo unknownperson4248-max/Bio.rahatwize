@@ -82,7 +82,7 @@ html{height:100%;overflow:hidden}body{position:relative;width:100%;max-width:non
 header{height:clamp(130px,22svh,230px)}footer{margin-top:26px;padding-bottom:6px;letter-spacing:3px}
 .columns{display:grid;grid-template-columns:minmax(0,46%) minmax(0,46%);gap:8%;align-items:start}
 .portrait{width:72%;margin:0 auto 20px}.profile{width:auto;max-width:none}.logo-stage{width:88%;margin:12px auto 6px}.roles{margin:10px 0 14px}#bio{font-size:17px;line-height:1.5;margin:12px 0}.signature{font-size:29px;margin:16px 0 20px}.together{font-size:12px;margin:16px auto 0}
-.social{gap:14px;padding:0}.social-link{min-height:75px;padding:9px 17px;gap:13px}.app-icon{width:47px;height:47px}.app-icon svg{width:33px;height:33px}.info strong{font-size:28px}.social-link:first-child .info strong,.freefire-link .info strong{font-size:22px}.info small{font-size:13px}.freefire-link .info small{font-size:16px}.theme-tools{top:80px}
+.social{gap:14px;padding:0}.social-link{min-height:75px;padding:9px 17px;gap:13px}.app-icon{width:47px;height:47px}.app-icon svg{width:33px;height:33px}.info strong{font-size:28px}.social-link:first-child .info strong,.freefire-link .info strong{font-size:22px}.info small{font-size:13px}.freefire-link .info small{font-size:16px}.theme-tools{top:120px}
 @media(max-width:700px){
  .wrap{max-width:560px;padding:14px 4% 12px}header{height:36vw;max-height:190px}.background{background-size:cover;background-position:center top}.background:before{height:43vw}
  .portrait{width:84%;margin:0 auto 15px}.logo-stage{width:100%;margin:10px auto 6px}.roles{font-size:clamp(5px,1.2vw,8px);letter-spacing:1.3px;margin:8px -4px 10px}
