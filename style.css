@@ -77,7 +77,7 @@
 
 /* One viewport composition: mobile and desktop retain side-by-side links. */
 html{height:100%;overflow:hidden}body{position:relative;width:100%;max-width:none;margin:0;height:100svh;min-height:0;overflow:hidden}
-.background,.shade,.neon-atmosphere{position:fixed;inset:0}.background{background-size:cover;background-position:center;animation:none}.background:before{height:43vw;max-height:550px}
+.background,.shade,.neon-atmosphere{position:fixed;inset:0}.background{background-size:cover;background-position:center top;animation:none}.background:before{height:43vw;max-height:550px}
 .wrap{position:absolute;left:50%;top:0;width:100%;max-width:1100px;min-height:0;margin:0;padding:18px 4.5% 16px;transform:translateX(-50%) scale(var(--page-scale,1));transform-origin:top center}
 header{height:clamp(130px,22svh,230px)}footer{margin-top:26px;padding-bottom:6px;letter-spacing:3px}
 .columns{display:grid;grid-template-columns:minmax(0,46%) minmax(0,46%);gap:8%;align-items:start}
