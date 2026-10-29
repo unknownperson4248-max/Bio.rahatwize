@@ -18,3 +18,6 @@ input::placeholder,textarea::placeholder{color:#92829f}
 .search-preview{background:#15131c;border-color:#393141}.sharing-preview>div{background:#1b1129}
 ::selection{background:#9632bb;color:white}*{scrollbar-color:#704082 #100a1b}
 @media(prefers-reduced-motion:reduce){button,a,input,textarea,#sidebar{transition:none}}
+
+
+select{display:block;width:100%;margin-top:8px;padding:13px 15px;border:1px solid #402c54;border-radius:11px;background:#0c0815;color:#f1e7ff;font:inherit}select:focus-visible{outline:2px solid #77e8ff;outline-offset:2px}#addLink{margin:8px 0 24px}
