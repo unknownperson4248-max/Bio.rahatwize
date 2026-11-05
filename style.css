@@ -90,11 +90,6 @@ img{max-width:100%;display:block}
 .card-stats{list-style:none;padding:12px 0;margin:auto 0 16px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .card-stats li{font:600 9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .card-stats b{display:block;font:20px var(--display);color:var(--red);letter-spacing:.02em;text-shadow:0 0 10px #e5091466}
-.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:1px solid #e5091466}
-.timeline li{position:relative;padding:0 0 26px}
-.timeline li:before{content:"";position:absolute;left:-28px;top:4px;width:11px;height:11px;background:var(--red);box-shadow:0 0 12px var(--red)}
-.tl-tag{font:600 9.5px var(--mono);letter-spacing:.2em;color:var(--red2)}
-.timeline p{margin:0;color:#b9b9c0;font-size:14px}
 
 /* links (admin data, own brand colors) */
 .social{display:grid;gap:12px}
@@ -124,8 +119,8 @@ img{max-width:100%;display:block}
 .js .reveal.in{opacity:1;transform:none}
 .reveal:after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--cyan);box-shadow:0 0 12px var(--cyan),0 0 30px var(--cyan);opacity:0;pointer-events:none}
 .reveal.in:after{animation:sweep 1.1s ease-out .1s}
-.js .reveal .card,.js .reveal .step,.js .reveal .timeline li,.js .reveal .social-link{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease,border-color .3s,box-shadow .3s}
-.js .reveal.in .card,.js .reveal.in .step,.js .reveal.in .timeline li,.js .reveal.in .social-link{opacity:1;transform:none}
+.js .reveal .card,.js .reveal .step,.js .reveal .social-link{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease,border-color .3s,box-shadow .3s}
+.js .reveal.in .card,.js .reveal.in .step,.js .reveal.in .social-link{opacity:1;transform:none}
 
 /* ---------- blueprint build ---------- */
 .bp-wait .nav,.bp-wait .hero,.bp-wait .hero-word{visibility:hidden}
@@ -171,14 +166,12 @@ img{max-width:100%;display:block}
   .flow{grid-template-columns:repeat(4,1fr)}
   .cards{grid-template-columns:repeat(3,1fr)}
   .social{grid-template-columns:repeat(3,1fr)}
-  .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;border-left:0;border-top:1px solid #e5091466;padding:22px 0 0}
-  .timeline li:before{left:0;top:-28px}
 }
 
 /* ---------- reduced motion ---------- */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*:before,*:after{animation:none!important;transition:none!important}
-  .js .reveal,.js .reveal .card,.js .reveal .step,.js .reveal .timeline li,.js .reveal .social-link{opacity:1;transform:none}
+  .js .reveal,.js .reveal .card,.js .reveal .step,.js .reveal .social-link{opacity:1;transform:none}
   .bp-grid,#blueprint{display:none}
 }
